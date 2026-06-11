@@ -1,0 +1,26 @@
+.main-layout {
+  position: relative;
+  min-height: 100vh;
+  background: #f1f5f9;
+  overflow-x: hidden;
+}
+
+app-navbar {
+  display: block;
+}
+
+.content-wrapper {
+  transition: margin-left 0.3s ease;
+  margin-top: 72px;
+  min-height: calc(100vh - 72px);
+}
+
+/*.main-layout.sidebar-open .content-wrapper {
+  margin-left: 250px;
+}*/
+
+.page-content {
+  padding: 2rem;
+  background: #f8fafc;
+  min-height: calc(100vh - 72px);
+}

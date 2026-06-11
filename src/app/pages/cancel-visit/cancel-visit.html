@@ -1,0 +1,44 @@
+<div class="container mt-4">
+
+  <h2>Cancel Visit</h2>
+
+  <div class="mb-3">
+
+    <label>Visit Id</label>
+
+    <input
+  type="number"
+  class="form-control"
+  [(ngModel)]="visitId">
+  </div>
+
+  <div class="mb-3">
+
+    <label>Reason Type</label>
+
+    <input
+      class="form-control"
+      [(ngModel)]="reasonType">
+
+  </div>
+
+  <div class="mb-3">
+
+    <label>Comments</label>
+
+    <textarea
+      class="form-control"
+      [(ngModel)]="comments">
+    </textarea>
+
+  </div>
+
+  <button
+    class="btn btn-danger"
+    (click)="cancelVisit()">
+
+    Cancel Visit
+
+  </button>
+
+</div>

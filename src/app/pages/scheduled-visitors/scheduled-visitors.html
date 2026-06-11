@@ -1,0 +1,90 @@
+
+<div class="container mt-4">
+
+  <h2>Scheduled Visitors</h2>
+
+
+
+  <table class="table table-striped">
+
+    <thead>
+      <tr>
+        <th>Visitor Id</th>
+        <th>Name</th>
+        <th>Phone Number</th>
+        <th>Status</th>
+        <th>Check In</th>
+        <th>Check Out</th>
+      </tr>
+    </thead>
+
+    <tbody>
+
+      <tr *ngFor="let visitor of visitors">
+
+        <td>{{ visitor.visitorId }}</td>
+        <td>{{ visitor.name }}</td>
+        <td>{{ visitor.phoneNumber }}</td>
+        <td>{{ visitor.status }}</td>
+        <td>
+  <input
+  type="checkbox"
+  [checked]="visitor.checkIn"
+  [disabled]="visitor.checkIn"
+  (click)="$event.preventDefault(); openConfirmModal(visitor,'checkin')">
+</td>
+
+<td>
+  <input
+  type="checkbox"
+  [checked]="visitor.checkOut"
+  [disabled]="!visitor.checkIn || visitor.checkOut"
+  (click)="$event.preventDefault(); openConfirmModal(visitor,'checkout')">
+</td>
+
+      </tr>
+
+    </tbody>
+
+  </table>
+
+</div>
+<div
+  *ngIf="showConfirmModal"
+  class="modal-backdrop-custom">
+
+  <div class="confirm-modal">
+
+    <h5>Confirmation</h5>
+
+    <p>
+
+      Are you sure you want to
+
+      {{ actionType === 'checkin'
+      ? 'Check In'
+      : 'Check Out' }}
+
+      {{ selectedVisitor?.name }} ?
+
+    </p>
+
+    <button
+      class="btn btn-secondary me-2"
+      (click)="cancelAction()">
+
+      Cancel
+
+    </button>
+
+    <button
+      class="btn btn-primary"
+      (click)="confirmAction()">
+
+      Confirm
+
+    </button>
+
+  </div>
+
+</div>

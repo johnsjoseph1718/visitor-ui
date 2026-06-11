@@ -1,0 +1,17 @@
+@if (message) {
+
+<div
+  class="alert"
+  [class.alert-success]="type === 'success'"
+  [class.alert-danger]="type === 'error'"
+  [class.alert-warning]="type === 'warning'">
+
+  <span *ngIf="type === 'success'">✅</span>
+  <span *ngIf="type === 'error'">❌</span>
+  <span *ngIf="type === 'warning'">⚠️</span>
+
+  {{ message }}
+
+</div>
+
+}

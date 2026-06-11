@@ -1,0 +1,23 @@
+.modal-backdrop-custom {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,.4);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  z-index: 9999;
+}
+
+.confirm-modal {
+
+  background: white;
+
+  padding: 20px;
+
+  border-radius: 12px;
+
+  min-width: 350px;
+
+}

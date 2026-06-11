@@ -1,0 +1,146 @@
+<div class="container mt-4">
+
+  <h2 class="mb-4">Visitors</h2>
+
+  <div class="row mb-4">
+
+    <div class="col-md-8">
+
+      <input
+        type="text"
+        class="form-control"
+        placeholder="Search Phone Number"
+        [(ngModel)]="phoneNumber">
+
+    </div>
+
+    <div class="col-md-4">
+<button
+  class="btn btn-primary w-100"
+  (click)="searchVisitor()">
+
+  Search
+
+</button>
+    </div>
+
+  </div>
+
+  @if (!isSearchMode) {
+
+    <div class="row g-4">
+<div class="row g-4">
+
+  <div class="col-md-3">
+    <button
+      class="visitor-card btn btn-outline-primary w-100 text-start"
+      type="button"
+      (click)="goToRegisterVisitor()">
+      Register Visitor
+    </button>
+  </div>
+
+  <div class="col-md-3">
+    <button
+      class="visitor-card btn btn-outline-success w-100 text-start"
+      type="button"
+      (click)="goToCreateVisitCard()">
+      Create Visit
+    </button>
+  </div>
+
+  <div class="col-md-3">
+    <button
+      class="visitor-card btn btn-outline-warning w-100 text-start"
+      type="button"
+      (click)="goToUpdateVisitorCard()">
+      Update Visitor
+    </button>
+  </div>
+
+  <div class="col-md-3">
+    <button
+      class="visitor-card btn btn-outline-danger w-100 text-start"
+      type="button"
+      (click)="goToCancelVisitCard()">
+      Cancel Visit
+    </button>
+  </div>
+
+</div>
+    </div>
+}
+
+
+@if (isSearchMode) {
+
+  <button
+    class="btn btn-secondary mb-3"
+    (click)="isSearchMode = false">
+
+    Back
+
+  </button>
+
+  <table class="table table-striped">
+
+    <thead>
+
+      <tr>
+
+        <th>ID</th>
+        <th>Name</th>
+        <th>Phone</th>
+        <th>Create Visit</th>
+        <th>Update</th>
+        <th>Cancel</th>
+
+      </tr>
+
+    </thead>
+
+    <tbody>
+
+      <tr>
+
+        <td>{{ searchResult.visitorId }}</td>
+        <td>{{ searchResult.name }}</td>
+        <td>{{ searchResult.phoneNumber }}</td>
+
+        <td>
+          <button
+  class="btn btn-success btn-sm"
+  (click)="goToCreateVisit()">
+
+  CV
+
+</button>
+        </td>
+
+        <td>
+          <button
+  class="btn btn-warning btn-sm"
+  (click)="goToUpdateVisitor()">
+
+  UP
+
+</button>
+        </td>
+
+        <td>
+          <button
+  class="btn btn-danger btn-sm"
+  (click)="goToCancelVisit()">
+
+  CAN
+
+          </button>
+        </td>
+
+      </tr>
+
+    </tbody>
+
+  </table>
+
+}

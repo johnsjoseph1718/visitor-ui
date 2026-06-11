@@ -1,1 +1,29 @@
 /* You can add global styles to this file, and also import other style files */
+/* Universal box-sizing makes width calculations predictable */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+/* Ensure the app always fills the screen correctly */
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  min-height: 100vh;
+  font-family: 'Segoe UI', Roboto, sans-serif;
+}
+
+/* Reusable responsive container for ALL your pages */
+.page-container {
+  width: 100%;
+  max-width: 1200px; /* Limits width on massive monitors */
+  margin: 0 auto;    /* Centers the content */
+  padding: 15px;     /* Prevents content from touching screen edges on mobile */
+}
+
+/* Responsive Grid System you can use anywhere */
+.responsive-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+}

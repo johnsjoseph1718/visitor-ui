@@ -1,0 +1,37 @@
+<div class="container mt-4">
+
+  <h2>Reports</h2>
+
+  <table class="table table-striped">
+
+    <thead>
+
+      <tr>
+
+        <th>Visitor Id</th>
+        <th>Name</th>
+        <th>Phone Number</th>
+        <th>Visit Date</th>
+        <th>Status</th>
+
+      </tr>
+
+    </thead>
+
+    <tbody>
+
+      <tr *ngFor="let report of reports">
+
+        <td>{{ report.visitorId }}</td>
+        <td>{{ report.name }}</td>
+        <td>{{ report.phoneNumber }}</td>
+        <td>{{ report.visitDate }}</td>
+        <td>{{ report.status }}</td>
+
+      </tr>
+
+    </tbody>
+
+  </table>
+
+</div>

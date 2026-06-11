@@ -1,0 +1,49 @@
+<div class="container mt-4">
+
+  <h2>Create Visit</h2>
+
+  <div class="mb-3">
+
+    <label class="form-label">
+      Visitor Id
+    </label>
+
+    <input
+      type="text"
+      class="form-control"
+      [value]="visitorId"
+      >
+
+  </div>
+
+  <div class="mb-3">
+
+    <label class="form-label">
+      Visit Date
+    </label>
+
+    <input
+      type="date"
+      class="form-control"
+      [(ngModel)]="visitDate">
+
+  </div>
+
+  <button
+    class="btn btn-primary"
+    (click)="createVisit()">
+
+    Create Visit
+
+  </button>
+
+</div>
+<app-message-alert
+  type="success"
+  [message]="successMessage">
+</app-message-alert>
+
+<app-message-alert
+  type="error"
+  [message]="errorMessage">
+</app-message-alert>

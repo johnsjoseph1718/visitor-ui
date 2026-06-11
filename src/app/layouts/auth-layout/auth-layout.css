@@ -1,0 +1,16 @@
+.auth-layout {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  background-color: #f5f7fb;
+}
+
+/* .auth-shell {
+  width: min(480px, 100%);
+  padding: 2rem;
+  background: #ffffff;
+  border-radius: 1rem;
+  box-shadow: 0 1rem 3rem rgba(15, 23, 42, 0.08);
+} */

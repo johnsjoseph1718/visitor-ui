@@ -1,0 +1,55 @@
+<div class="container mt-4">
+
+  <h2>Register Visitor</h2>
+
+  @if (successMessage) {
+    <div class="alert alert-success">
+      {{ successMessage }}
+    </div>
+  }
+
+  @if (errorMessage) {
+    <div class="alert alert-danger">
+      {{ errorMessage }}
+    </div>
+  }
+
+  <div class="mb-3">
+    <label>Name</label>
+    <input
+      class="form-control"
+      [(ngModel)]="name">
+  </div>
+
+  <div class="mb-3">
+    <label>Phone Number</label>
+    <input
+      class="form-control"
+      [(ngModel)]="phoneNumber">
+  </div>
+
+  <div class="mb-3">
+    <label>Birth Date</label>
+    <input
+      type="date"
+      class="form-control"
+      [(ngModel)]="birthDate">
+  </div>
+
+  <div class="mb-3">
+    <label>Visit Date</label>
+    <input
+      type="date"
+      class="form-control"
+      [(ngModel)]="visitDate">
+  </div>
+
+  <button
+    class="btn btn-primary"
+    (click)="registerVisitor()">
+
+    Register Visitor
+
+  </button>
+
+</div>

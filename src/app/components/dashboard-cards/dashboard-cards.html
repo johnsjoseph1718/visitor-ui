@@ -1,0 +1,43 @@
+<!-- Dashboard Cards -->
+<div class="row g-4">
+
+  <!-- Scheduled -->
+  <div class="col-md-3">
+    <div class="card shadow-sm text-center p-4 dashboard-card" (click)="onScheduledCardClick()">
+      <h1 class="text-primary">{{dashboard.scheduled}}</h1>
+      <h6>Scheduled</h6>
+    </div>
+  </div>
+
+  <!-- Waiting -->
+  <div class="col-md-3">
+    <div class="card shadow-sm text-center p-4 dashboard-card">
+      <h1 class="text-warning">{{dashboard.waiting}}</h1>
+      <h6>Waiting</h6>
+    </div>
+  </div>
+
+<!-- Completed -->
+<div class="col-md-3">
+  <div
+    class="card shadow-sm text-center p-4 dashboard-card"
+    (click)="onCompletedCardClick()">
+
+    <h1 class="text-success">
+      {{dashboard.completed}}
+    </h1>
+
+    <h6>Completed</h6>
+
+  </div>
+</div>
+
+  <!-- Cancelled -->
+  <div class="col-md-3">
+    <div class="card shadow-sm text-center p-4 dashboard-card">
+      <h1 class="text-danger">{{dashboard.cancelled}}</h1>
+      <h6>Cancelled</h6>
+    </div>
+  </div>
+
+</div>

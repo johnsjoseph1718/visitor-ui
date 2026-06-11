@@ -1,0 +1,67 @@
+<div class="container-fluid p-4">
+
+  <div class="d-flex justify-content-between align-items-center mb-4">
+
+    <div>
+      <h2 class="fw-bold mb-1">Dashboard</h2>
+      <p class="text-muted mb-0">
+        Visitor Management Overview
+      </p>
+    </div>
+
+    
+  </div>
+
+
+ <app-dashboard-cards
+  [dashboard]="dashboard"
+  (scheduledClick)="goToScheduledVisitors()"
+  //(waitingClick)="goToWaitingVisitors()"
+  (completedClick)="goToCompletedVisitors()"
+ // (cancelledClick)="goToCancelledVisitors()"
+  //(rejectedClick)="goToRejectedVisitors()"
+  >
+  
+</app-dashboard-cards>
+
+</div>
+<div class="card mt-4" *ngIf="scheduledVisitors.length > 0">
+
+  <div class="card-header">
+    Scheduled Visitors
+  </div>
+<div class = "card mt-4" *ngIf="goToScheduledVisitors.length > 0">
+  <div class="card-header">
+    completed Visitors
+  </div>
+  <div class="card-body">
+
+    <table class="table table-striped">
+
+      <thead>
+        <tr>
+          <th>Visitor Id</th>
+          <th>Name</th>
+          <th>Phone</th>
+          <th>Status</th>
+        </tr>
+      </thead>
+
+      <tbody>
+
+        <tr *ngFor="let visitor of scheduledVisitors">
+
+          <td>{{visitor.visitorId}}</td>
+          <td>{{visitor.name}}</td>
+          <td>{{visitor.phoneNumber}}</td>
+          <td>{{visitor.status}}</td>
+
+        </tr>
+
+      </tbody>
+
+    </table>
+
+  </div>
+
+</div>

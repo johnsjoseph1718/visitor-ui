@@ -1,0 +1,55 @@
+<div class="container mt-4">
+
+  <h2>Update Visitor</h2>
+
+  <div class="mb-3">
+
+    <label>Visitor Id</label>
+
+    <input
+  type="number"
+  class="form-control"
+  [(ngModel)]="visitorId">
+
+  </div>
+
+  <div class="mb-3">
+
+    <label>Name</label>
+
+    <input
+      class="form-control"
+      [(ngModel)]="name">
+
+  </div>
+
+  <div class="mb-3">
+
+    <label>Phone Number</label>
+
+    <input
+      class="form-control"
+      [(ngModel)]="phoneNumber">
+
+  </div>
+
+  <div class="mb-3">
+
+    <label>Birth Date</label>
+
+    <input
+      type="date"
+      class="form-control"
+      [(ngModel)]="birthDate">
+
+  </div>
+
+  <button
+    class="btn btn-primary"
+    (click)="updateVisitor()">
+
+    Update Visitor
+
+  </button>
+
+</div>

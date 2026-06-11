@@ -1,0 +1,16 @@
+<div class="main-layout" [class.sidebar-open]="isSidebarOpen">
+  <app-navbar (menuClick)="toggleSidebar()"></app-navbar>
+
+  <app-sidebar
+    [isOpen]="isSidebarOpen"
+    (logout)="logout()"
+    (closeSidebar)="toggleSidebar()">
+  </app-sidebar>
+
+  <div class="content-wrapper">
+    <main class="page-content">
+      <router-outlet></router-outlet>
+    </main>
+  </div>
+</div>
+

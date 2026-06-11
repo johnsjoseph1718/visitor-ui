@@ -1,0 +1,41 @@
+<div class="sidebar-backdrop" *ngIf="isOpen" (click)="close()"></div>
+
+<aside class="sidebar" [class.open]="isOpen">
+  <div class="sidebar-header">
+    <span class="sidebar-heading">Navigation</span>
+    <button class="close-button" type="button" (click)="close()">
+      <i class="fa-solid fa-xmark"></i>
+    </button>
+  </div>
+
+  <nav class="sidebar-nav">
+   
+<a
+  routerLink="/dashboard"
+  routerLinkActive="active"
+  (click)=close()>
+  Home
+</a>
+
+
+
+<a
+  routerLink="/visitors"
+  routerLinkActive="active"
+ (click)=close()>
+  Visitors
+</a>
+
+<a
+  routerLink="/reports"
+  routerLinkActive="active"
+  (click)=close()>
+  Reports
+</a>
+  </nav>
+
+  <button class="logout-btn" type="button" (click)="onLogout()">
+    <i class="fa-solid fa-right-from-bracket"></i>
+    Logout
+  </button>
+</aside>

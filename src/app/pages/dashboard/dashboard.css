@@ -1,0 +1,26 @@
+.dashboard-page {
+  display: grid;
+  gap: 1rem;
+}
+
+.dashboard-page h1 {
+  margin: 0;
+  font-size: 2rem;
+}
+
+.content {
+    background-color: #f5f7fa;
+}
+.dashboard-card {
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border-radius: 15px;
+}
+
+.dashboard-card:hover {
+    transform: translateY(-5px);
+}
+
+.card {
+    border-radius: 15px;
+}

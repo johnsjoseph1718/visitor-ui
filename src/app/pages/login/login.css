@@ -1,0 +1,32 @@
+.login-page {
+  display: grid;
+  gap: 1rem;
+}
+
+.login-page h1 {
+  margin: 0;
+  font-size: 2rem;
+}
+body {
+  background-color: #e7f2ed;
+}
+
+.card {
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+background: linear-gradient(to right, rgba(232, 240, 234, 0.77), rgba(220, 231, 223, 0.842));
+  padding: 20px;
+  max-width: 400px;
+  margin: auto;
+}
+button {
+  background-color: #84d7ec;
+  color: rgb(248, 245, 245);
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: none;
+
+ 
+}
+

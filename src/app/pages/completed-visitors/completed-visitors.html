@@ -1,0 +1,29 @@
+<table class="table table-striped">
+
+  <thead>
+
+    <tr>
+
+      <th>Visitor Id</th>
+      <th>Name</th>
+      <th>Phone Number</th>
+      <th>Status</th>
+
+    </tr>
+
+  </thead>
+
+  <tbody>
+
+    <tr *ngFor="let visitor of visitors">
+
+      <td>{{ visitor.visitorId }}</td>
+      <td>{{ visitor.name }}</td>
+      <td>{{ visitor.phoneNumber }}</td>
+      <td>{{ visitor.status }}</td>
+
+    </tr>
+
+  </tbody>
+
+</table>
